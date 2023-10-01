@@ -1,0 +1,49 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+      <div class="row" style="margin-top: 20px">
+        <div class="col-md-6 offset-md-3">
+          <mat-card>
+            <mat-card-content>
+              <h1 class="text-center">Order Here</h1>
+              <form (ngSubmit)="formSubmit()">
+  
+                  <!-- {{order| json}} -->
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>consignmentCategory</mat-label>
+                  <input
+                  [(ngModel)] ="order.consignmentCategory" 
+                  name="consignmentCategory"
+                  matInput placeholder="consignmentCategory" />
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>deleveryPartner</mat-label>
+                  <input 
+                  [(ngModel)] ="order.deleveryPartner" 
+                  name="deleveryPartner"
+                  matInput placeholder="deleveryPartner" />
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>consignmentStatus</mat-label>
+                  <input 
+                  [(ngModel)] ="order.consignmentStatus" 
+                  name="consignmentStatus"
+                  matInput placeholder="consignmentStatus" />
+                </mat-form-field>
+                <div class="container">
+                  <button type="submit" mat-raised-button color="primary">Order</button>
+                  <button
+                    style="margin-left: 20px"
+                    mat-raised-button
+                    color="accent"
+                  >
+                    Reset
+                  </button>
+                </div>
+              </form>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  
